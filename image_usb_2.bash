@@ -59,7 +59,7 @@ function PROCESS_T {
 		if [ $? -eq 0 ]
 		then
 			   echo "asr imagescan --filechecksum --source \"$SOURCEIMG\""
-			   echo "asr -noverify erase -source \"$SOURCEIMG\" -t \"/dev/$TARGETDISK\""
+			   echo "asr restore -noverify -erase -noprompt -source \"$SOURCEIMG\" -t \"/dev/$TARGETDISK\""
 			   echo "--------- $TARGETDRIVE written -------------" 
 		else
 			echo "$TARGETDRIVE FAILED partitioning"
@@ -72,7 +72,7 @@ function PROCESS {
 		if [ $? -eq 0 ]
 		then
 			   asr  imagescan --filechecksum --source "$SOURCEIMG"
-			   asr -noverify -erase -source "$SOURCEIMG" -t "/dev/$TARGETDISK"
+			   asr restore -noverify -erase -noprompt -source "$SOURCEIMG" -t "/dev/$TARGETDISK"
 			   echo "--------- $TARGETDRIVE written -------------" 
 		else
 			echo "$TARGETDRIVE FAILED partitioning"
