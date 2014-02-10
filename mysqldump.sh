@@ -11,7 +11,7 @@ BACKUPDIR=/var/mysql/BACKUPS/
 # other variables
 MYSQLDUMP=/usr/bin/mysqldump
 MYSQLADMIN=/usr/bin/mysqladmin
-SQLPASS=`cat /mount/data/mysql/mysql/PASSWORD`
+SQLPASS=
 date=`/bin/date '+%d%b%Y'`
 MYSQLSOCKET=/var/run/mysqld/mysqld.sock
 
